@@ -19,9 +19,10 @@ class QueryInterceptor @Inject constructor(
 
         val url = originalUrl
             .newBuilder()
-            .addQueryParameter("apiKey", publicKey)
+            .addQueryParameter("apikey", publicKey)
             .addQueryParameter("ts", ts.toString())
             .addQueryParameter("hash", hash)
+            .addQueryParameter("limit", "100")
             .build()
 
 

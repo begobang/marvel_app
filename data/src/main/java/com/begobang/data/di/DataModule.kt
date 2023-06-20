@@ -26,7 +26,7 @@ class DataModule {
 
     @Provides
     @ApiEndPoint
-    fun provideApiEndPoint(): String = "http://gateway.marvel.com/v1/public"
+    fun provideApiEndPoint(): String = "http://gateway.marvel.com/v1/public/"
 
     @Provides
     @PublicKey

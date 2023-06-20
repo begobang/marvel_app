@@ -10,8 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.begobang.presentation.ui.screens.pokemonDetail.PokemonDetail
-import com.begobang.presentation.ui.screens.pokemonsList.PokemonList
+import com.begobang.presentation.ui.screens.marvelList.CharactersList
 
 @Composable
 fun Navigation(navController: NavHostController) {
@@ -29,7 +28,7 @@ private fun NavGraphBuilder.marvelNav(navController: NavController) {
         route = Screens.MARVEL.route
     ) {
         composable(NavCommand.ContentType(Screens.MARVEL)) {
-            Text(text = Screens.MARVEL.route)
+            CharactersList()
         }
 
         composable(NavCommand.ContentTypeDetail(Screens.MARVEL)) {

@@ -11,7 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.begobang.presentation.ui.navigation.NavigationItem
 
 @Composable
-fun rememberPokemonAppState(
+fun rememberMarvelAppState(
     scaffoldState: ScaffoldState = rememberScaffoldState(),
     navController: NavHostController = rememberNavController()
 ): MarvelAppState = remember(scaffoldState, navController) {

@@ -7,6 +7,7 @@ import com.begobang.data.response.MarvelItemResponse
 import com.begobang.data.response.toDomain
 import com.begobang.domain.business.MarvelItemBusiness
 import com.begobang.domain.failure.Failure
+import retrofit2.await
 import javax.inject.Inject
 
 interface CharactersDataSource {

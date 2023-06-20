@@ -12,7 +12,7 @@ import com.begobang.presentation.ui.navigation.Navigation
 import com.begobang.presentation.ui.theme.MarvelTheme
 
 @Composable
-fun MarvelApp(appState: MarvelAppState = rememberPokemonAppState(), viewModel: MarvelAppViewModel = hiltViewModel()) {
+fun MarvelApp(appState: MarvelAppState = rememberMarvelAppState(), viewModel: MarvelAppViewModel = hiltViewModel()) {
 
     viewModel.setNavController(appState.navController)
 
