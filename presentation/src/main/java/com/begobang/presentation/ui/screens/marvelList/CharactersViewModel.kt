@@ -54,7 +54,7 @@ class CharactersViewModel @Inject constructor(
 
 
 data class CharactersState(
-    val loading: Boolean = false,
+    val loading: Boolean = true,
     val characters: List<MarvelItemBusiness>? = null,
     val error: String? = null
 )

@@ -110,8 +110,8 @@ fun CharacterItemScreen(
                 contentDescription = item.name,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .fillMaxWidth(0.35f)
-                    .height(70.dp)
+                    .fillMaxWidth(0.45f)
+                    .height(80.dp)
                     .clip(MaterialTheme.shapes.medium),
                 placeholder = painterResource(R.drawable.ic_marvel),
                 error = painterResource(R.drawable.ic_marvel)
