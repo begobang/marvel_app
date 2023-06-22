@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Marvel</string>
-    <string name="detail">Superhero</string>
+    <string name="detail">Character Detail</string>
 </resources>
