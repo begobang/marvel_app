@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.begobang.presentation.ui.screens.marvelDetail.Character
 import com.begobang.presentation.ui.screens.marvelList.CharactersList
 
 @Composable
@@ -32,7 +33,7 @@ private fun NavGraphBuilder.marvelNav(navController: NavController) {
         }
 
         composable(NavCommand.ContentTypeDetail(Screens.MARVEL)) {
-            it.arguments?.getString("itemId")?.let { itemId ->  Text(text = itemId) }
+            it.arguments?.getString("itemId")?.let { itemId ->  Character(id = itemId.toInt()) }
         }
     }
 }

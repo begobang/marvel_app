@@ -13,8 +13,4 @@ class CharactersRepositoryImpl @Inject constructor(
     override suspend fun getCharacters(): Either<Failure, List<MarvelItemBusiness>?> {
         return remoteDataSource.getCharacters()
     }
-
-    override suspend fun getCharacter(id: Int): Either<Failure, MarvelItemBusiness?> {
-        return remoteDataSource.findCharacter(id)
-    }
 }

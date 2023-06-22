@@ -12,7 +12,6 @@ import javax.inject.Inject
 
 interface CharactersDataSource {
     suspend fun getCharacters(): Either<Failure, List<MarvelItemBusiness>?>
-    suspend fun findCharacter(id: Int): Either<Failure, MarvelItemBusiness?>
 }
 
 class CharactersRemoteDataSource @Inject constructor(
@@ -23,14 +22,5 @@ class CharactersRemoteDataSource @Inject constructor(
             call = service.getCharactersAsync(),
             success = { it?.data?.results?.map { it.toDomain() } }
         )
-    }
-
-    override suspend fun findCharacter(id: Int): Either<Failure, MarvelItemBusiness?> {
-        val all = getCharacters()
-        return if(all is Either.Right){
-            Either.Right(all.b?.find { it.id == id  })
-        } else {
-            Either.Left(Failure.BaseFailure())
-        }
     }
 }

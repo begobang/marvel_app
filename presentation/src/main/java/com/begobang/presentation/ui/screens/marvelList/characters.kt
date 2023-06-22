@@ -72,7 +72,7 @@ fun CharactersScreen(loading: Boolean, characters: List<MarvelItemBusiness>? = e
                         CharacterItemScreen(
                             item = it,
                             modifier = Modifier.clickable {
-                                onClick(it.name ?: "")
+                                onClick("${it.id}")
                             }
                         )
                     }

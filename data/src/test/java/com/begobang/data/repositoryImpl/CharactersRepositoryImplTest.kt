@@ -10,8 +10,7 @@ import org.junit.Test
 
 class CharactersRepositoryImplTest {
 
-    private val response: List<MarvelItemBusiness>? = emptyList()
-    private val item = MarvelItemBusiness(1, "test", null, null, null, null, null, null, null, null, null)
+    private val response: List<MarvelItemBusiness> = emptyList()
 
     @Test
     fun `get characters - returns success`() {
@@ -36,34 +35,6 @@ class CharactersRepositoryImplTest {
 
         //When
         val actual = runBlocking { repository.getCharacters() }
-
-        //Then
-        TestCase.assertEquals(either, actual)
-    }
-
-    @Test
-    fun `find character - return failure`() {
-        //Given
-        val either = Either.Left(Failure.BaseFailure())
-        val remoteDataSource = FakeCharactersRemoteDataSource(single = either)
-        val repository = CharactersRepositoryImpl(remoteDataSource)
-
-        //When
-        val actual = runBlocking { repository.getCharacter(0) }
-
-        //Then
-        TestCase.assertEquals(either, actual)
-    }
-
-    @Test
-    fun `find character - return success`() {
-        //Given
-        val either = Either.Right(item)
-        val remoteDataSource = FakeCharactersRemoteDataSource(single = either)
-        val repository = CharactersRepositoryImpl(remoteDataSource)
-
-        //When
-        val actual = runBlocking { repository.getCharacter(1) }
 
         //Then
         TestCase.assertEquals(either, actual)
